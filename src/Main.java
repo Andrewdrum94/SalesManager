@@ -4,22 +4,22 @@ public class Main {
         SalesManager salesManager = new SalesManager(new long[]{});
         long max = salesManager.max();
         System.out.println(max);
-        int min = salesManager.min(max);
-        int sum = 0;
-        for (int s: salesManager.sales) {
+        long min = salesManager.min(max);
+        long sum = 0;
+        for (long s: salesManager.sales) {
             sum += s;
         }
         int length = salesManager.sales.length;
         System.out.println(mediumCropped(min, max, sum, length));
     }
 
-    public static int mediumCropped(int max, int min, int sum, int length) {
+    public static long mediumCropped(long max, long min, long sum, int length) {
         if (length == 1) {
             return sum;
         }
         if (length == 2) {
             return sum/2;
         }
-        return (sum - (max + min))/(length-2);
+        return ((sum - (max + min))/(length-2));
     }
 }

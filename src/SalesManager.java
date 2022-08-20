@@ -15,13 +15,13 @@ public class SalesManager {
         return max;
     }
 
-    public int min(int max) {
-        int min = max;
-        for (int sale:sales) {
+    public int min(long max) {
+        long min = max;
+        for (long sale:sales) {
             if (sale < min) {
                 min = sale;
             }
         }
-        return min;
+        return (int) min;
     }
 }
